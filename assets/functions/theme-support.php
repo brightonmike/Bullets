@@ -1,7 +1,7 @@
 <?php
 	
 // Adding WP Functions & Theme Support
-function gunnertheme_theme_support() {
+function bullets_theme_support() {
 
 	// Add WP Thumbnail Support
 	add_theme_support( 'post-thumbnails' );
@@ -40,8 +40,8 @@ function gunnertheme_theme_support() {
 	); 
 	
 	// Set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.
-	$GLOBALS['content_width'] = apply_filters( 'gunnertheme_theme_support', 1200 );	
+	$GLOBALS['content_width'] = apply_filters( 'bullets_theme_support', 1200 );	
 	
 } /* end theme support */
 
-add_action( 'after_setup_theme', 'gunnertheme_theme_support' );
+add_action( 'after_setup_theme', 'bullets_theme_support' );

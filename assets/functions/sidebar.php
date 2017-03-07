@@ -1,10 +1,10 @@
 <?php
 // SIDEBARS AND WIDGETIZED AREAS
-function gunnertheme_register_sidebars() {
+function bullets_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __('Sidebar 1', 'gunnertheme'),
-		'description' => __('The first (primary) sidebar.', 'gunnertheme'),
+		'name' => __('Sidebar 1', 'bullets'),
+		'description' => __('The first (primary) sidebar.', 'bullets'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -13,8 +13,8 @@ function gunnertheme_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'offcanvas',
-		'name' => __('Offcanvas', 'gunnertheme'),
-		'description' => __('The offcanvas sidebar.', 'gunnertheme'),
+		'name' => __('Offcanvas', 'bullets'),
+		'description' => __('The offcanvas sidebar.', 'bullets'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -31,8 +31,8 @@ function gunnertheme_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'sidebar2',
-		'name' => __('Sidebar 2', 'gunnertheme'),
-		'description' => __('The second (secondary) sidebar.', 'gunnertheme'),
+		'name' => __('Sidebar 2', 'bullets'),
+		'description' => __('The second (secondary) sidebar.', 'bullets'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',

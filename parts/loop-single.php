@@ -11,8 +11,8 @@
 	</section>
 						
 	<footer>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gunnertheme' ), 'after'  => '</div>' ) ); ?>
-		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'gunnertheme' ) . '</span> ', ', ', ''); ?></p>	
+		<?php wp_link_pages( array( 'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bullets' ), 'after'  => '</div>' ) ); ?>
+		<p class="tags"><?php the_tags('<span class="tags-title">' . __( 'Tags:', 'bullets' ) . '</span> ', ', ', ''); ?></p>	
 	</footer>
 													
 </article>

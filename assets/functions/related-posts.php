@@ -1,6 +1,6 @@
 <?php
-// Related Posts Function, matches posts by tags - call using gunnertheme_related_posts(); )
-function gunnertheme_related_posts() {
+// Related Posts Function, matches posts by tags - call using bullets_related_posts(); )
+function bullets_related_posts() {
 	global $post;
 	$tag_arr = '';
 	$tags = wp_get_post_tags( $post->ID );
@@ -15,8 +15,8 @@ function gunnertheme_related_posts() {
 		);
 		$related_posts = get_posts( $args );
 		if($related_posts) {
-		echo __( '<h4>Related Posts</h4>', 'gunnertheme' );
-		echo '<ul id="gunnertheme-related-posts">';
+		echo __( '<h4>Related Posts</h4>', 'bullets' );
+		echo '<ul id="bullets-related-posts">';
 			foreach ( $related_posts as $post ) : setup_postdata( $post ); ?>
 				<li class="related_post">
 					<a href="<?php the_permalink() ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
@@ -26,4 +26,4 @@ function gunnertheme_related_posts() {
 			}
 	wp_reset_postdata();
 	echo '</ul>';
-} /* end gunnertheme related posts function */
+} /* end bullets related posts function */

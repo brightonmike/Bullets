@@ -2,7 +2,7 @@
 					<div>
 						<div>
 							<nav role="navigation">
-	    						<?php gunnertheme_footer_links(); ?>
+	    						<?php bullets_footer_links(); ?>
 	    					</nav>
 	    				</div>
 						<div>

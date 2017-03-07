@@ -2,13 +2,13 @@
 // Register menus
 register_nav_menus(
 	array(
-		'main-nav' => __( 'The Main Menu', 'gunnertheme' ),   // Main nav in header
-		'footer-links' => __( 'Footer Links', 'gunnertheme' ) // Secondary nav in footer
+		'main-nav' => __( 'The Main Menu', 'bullets' ),   // Main nav in header
+		'footer-links' => __( 'Footer Links', 'bullets' ) // Secondary nav in footer
 	)
 );
 
 // The Top Menu
-function gunnertheme_top_nav() {
+function bullets_top_nav() {
 	 wp_nav_menu(array(
         'container' => false,                           // Remove nav container
         'menu_class' => 'vertical medium-horizontal menu',       // Adding custom nav class
@@ -29,7 +29,7 @@ class Topbar_Menu_Walker extends Walker_Nav_Menu {
 }
 
 // The Off Canvas Menu
-function gunnertheme_off_canvas_nav() {
+function bullets_off_canvas_nav() {
 	 wp_nav_menu(array(
         'container' => false,                           // Remove nav container
         'menu_class' => 'vertical menu',       // Adding custom nav class
@@ -49,10 +49,10 @@ class Off_Canvas_Menu_Walker extends Walker_Nav_Menu {
 }
 
 // The Footer Menu
-function gunnertheme_footer_links() {
+function bullets_footer_links() {
     wp_nav_menu(array(
     	'container' => 'false',                         // Remove nav container
-    	'menu' => __( 'Footer Links', 'gunnertheme' ),   	// Nav name
+    	'menu' => __( 'Footer Links', 'bullets' ),   	// Nav name
     	'menu_class' => 'menu',      					// Adding custom nav class
     	'theme_location' => 'footer-links',             // Where it's located in the theme
         'depth' => 0,                                   // Limit the depth of the nav
@@ -61,7 +61,7 @@ function gunnertheme_footer_links() {
 } /* End Footer Menu */
 
 // Header Fallback Menu
-function gunnertheme_main_nav_fallback() {
+function bullets_main_nav_fallback() {
 	wp_page_menu( array(
 		'show_home' => true,
     	'menu_class' => '',      						// Adding custom nav class
@@ -74,7 +74,7 @@ function gunnertheme_main_nav_fallback() {
 }
 
 // Footer Fallback Menu
-function gunnertheme_footer_links_fallback() {
+function bullets_footer_links_fallback() {
 	/* You can put a default here if you like */
 }
 
