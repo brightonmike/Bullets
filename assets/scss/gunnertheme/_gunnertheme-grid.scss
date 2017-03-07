@@ -1,0 +1,53 @@
+.row {
+	display:block;
+
+	@media (min-width:$grid-break-point){
+		display:flex;
+		flex-wrap:wrap;
+
+		// optional no-wrap
+
+		&--nowrap {
+			flex-wrap:nowrap;
+		}
+
+		// handle horizontal alignment
+
+		&--center {
+			justify-content:center;
+		}
+
+		&--justified {
+			justify-content:space-between;
+		}
+
+		&--spaced {
+			justify-content:space-around;
+		}
+
+		&--end {
+			justify-content:flex-end;
+		}
+
+		// handle vertical alignment
+
+		&--middle {
+			align-items:center;
+		}
+
+		&--bottom {
+			align-items:flex-end;
+		}
+
+		&--top {
+			align-items:flex-start;
+		}		
+
+	}
+}
+
+.column {
+	@media (min-width:$grid-break-point){
+		flex:1;
+	}
+}
