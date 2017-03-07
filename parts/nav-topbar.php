@@ -5,6 +5,6 @@
 		</ul>
 	</div>
 	<div class="top-bar-right">
-		<?php gunnertheme_top_nav(); ?>
+		<?php bullets_top_nav(); ?>
 	</div>
 </div>

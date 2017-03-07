@@ -6,10 +6,10 @@
 					
 	<section itemprop="articleBody">
 		<a href="<?php the_permalink() ?>"><?php the_post_thumbnail('full'); ?></a>
-		<?php the_content('<button class="tiny">' . __( 'Read more...', 'gunnertheme' ) . '</button>'); ?>
+		<?php the_content('<button class="tiny">' . __( 'Read more...', 'bullets' ) . '</button>'); ?>
 	</section>
 						
 	<footer>
-    	<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'gunnerthemetheme') . '</span> ', ', ', ''); ?></p>
+    	<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'bulletstheme') . '</span> ', ', ', ''); ?></p>
 	</footer>	    						
 </article>

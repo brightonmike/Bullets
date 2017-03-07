@@ -5,11 +5,11 @@
 		<article>
 		
 			<header>
-				<h1><?php _e( 'Epic 404 - Article Not Found', 'gunnertheme' ); ?></h1>
+				<h1><?php _e( 'Epic 404 - Article Not Found', 'bullets' ); ?></h1>
 			</header>
 	
 			<section>
-				<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'gunnertheme' ); ?></p>
+				<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bullets' ); ?></p>
 			</section>
 
 			<section>

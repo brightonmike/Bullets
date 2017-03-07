@@ -8,7 +8,7 @@
 		    
 		<?php endwhile; ?>	
 
-			<?php gunnertheme_page_navi(); ?>
+			<?php bullets_page_navi(); ?>
 			
 		<?php else : ?>
 									

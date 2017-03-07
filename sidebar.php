@@ -7,7 +7,7 @@
 	<?php else : ?>
 						
 	<div class="alert help">
-		<p><?php _e( 'Please activate some Widgets.', 'gunnertheme' );  ?></p>
+		<p><?php _e( 'Please activate some Widgets.', 'bullets' );  ?></p>
 	</div>
 
 	<?php endif; ?>
