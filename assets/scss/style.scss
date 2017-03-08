@@ -9,9 +9,20 @@
 
 // import the bullets
 
+
+// these are the base level bullets for the basics
 @import "bullets/bullets-base";
-@import "bullets/bullets-type";
 @import "bullets/bullets-grid";
+@import "bullets/bullets-type";
+@import "bullets/bullets-links";
 @import "bullets/bullets-colour";
 @import "bullets/bullets-inputs";
 @import "bullets/bullets-button";
+
+// these are the bullets for giving common elements header, footer, article etc a bit of structure and form
+@import "bullets/bullets-header";
+@import "bullets/bullets-footer";
+@import "bullets/bullets-article";
+
+// block bullets - perfect for those repeater/flexible layouts
+@import "bullets/bullets-blocks";

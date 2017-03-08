@@ -1,11 +1,22 @@
-button, [type='submit'] {
-	
+button, [type='submit'], .button {
+	display: inline-block;
+	padding: $button-padding-topbottom $button-padding-leftright;
+	background: $primary;
+	color: $button-text-color;
 
-	&.primary {
+	text-decoration:none;
+	text-transform: $button-text-transform;
+	letter-spacing: $button-letter-spacing;
 
+	&:hover {
+		background: darken($primary, 5%);
+		color: $button-text-color;		
 	}
 
-	&.secondary {
-		
-	}
+}
+
+.button {
+	&--large {
+		padding: round($button-padding-topbottom*1.2) round($button-padding-leftright*1.5);
+	}	
 }

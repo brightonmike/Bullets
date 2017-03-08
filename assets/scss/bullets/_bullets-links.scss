@@ -1,0 +1,20 @@
+a {
+	line-height: inherit;
+	color:$primary;
+
+	&:active {
+		color:$primary;
+	}
+
+	&:focus {
+		color:$primary;
+	}
+	
+	&:hover {
+		color:darken($primary, 10%);
+	}
+
+	// &:visited {
+	// 	color:darken($primary, 5%);
+	// }	
+}
