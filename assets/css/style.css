@@ -503,6 +503,154 @@ img {
   max-width: 100%;
   display: inline-block; }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.row {
+  display: block; }
+  @media (min-width: 20rem) {
+    .row {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      .row--nowrap {
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+      .row--center {
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center; }
+      .row--justified {
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+      .row--spaced {
+        -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+        justify-content: space-around; }
+      .row--end {
+        -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+        justify-content: flex-end; }
+      .row--middle {
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; }
+      .row--bottom {
+        -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+        align-items: flex-end; }
+      .row--top {
+        -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+        align-items: flex-start; } }
+
+.column {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 20rem) {
+    .column {
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+      .column--20 {
+        -webkit-flex: 2;
+        -ms-flex: 2;
+        flex: 2; }
+      .column--25 {
+        -webkit-flex: 2.5;
+        -ms-flex: 2.5;
+        flex: 2.5; }
+      .column--50 {
+        -webkit-flex: 5;
+        -ms-flex: 5;
+        flex: 5; } }
+
+.order-1 {
+  flex-order: 1; }
+
+.order-2 {
+  flex-order: 2; }
+
+.order-3 {
+  flex-order: 3; }
+
+.order-4 {
+  flex-order: 4; }
+
+.order-5 {
+  flex-order: 5; }
+
+.order-6 {
+  flex-order: 6; }
+
+.order-7 {
+  flex-order: 7; }
+
+.order-8 {
+  flex-order: 8; }
+
+.order-9 {
+  flex-order: 9; }
+
+.order-10 {
+  flex-order: 10; }
+
+.order-11 {
+  flex-order: 11; }
+
+.order-12 {
+  flex-order: 12; }
+
+.order-13 {
+  flex-order: 13; }
+
+.order-14 {
+  flex-order: 14; }
+
+.order-15 {
+  flex-order: 15; }
+
+.order-16 {
+  flex-order: 16; }
+
+.order-17 {
+  flex-order: 17; }
+
+.order-18 {
+  flex-order: 18; }
+
+.order-19 {
+  flex-order: 19; }
+
+.order-20 {
+  flex-order: 20; }
+
+.order-21 {
+  flex-order: 21; }
+
+.order-22 {
+  flex-order: 22; }
+
+.order-23 {
+  flex-order: 23; }
+
+.order-24 {
+  flex-order: 24; }
+
+.order-25 {
+  flex-order: 25; }
+
+.content {
+  padding: 1rem;
+  margin: 1rem; }
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2; }
 
@@ -655,150 +803,23 @@ a {
   a:hover {
     color: #115b8d; }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto; }
+button, [type='submit'], .button {
+  display: inline-block;
+  padding: 0.5rem 1.375rem;
+  background: #1779ba;
+  color: #fefefe;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px; }
+  button:hover, [type='submit']:hover, .button:hover {
+    background: #146aa3;
+    color: #fefefe; }
 
-.row {
-  display: block; }
-  @media (min-width: 20rem) {
-    .row {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-      .row--nowrap {
-        -webkit-flex-wrap: nowrap;
-        -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap; }
-      .row--center {
-        -webkit-justify-content: center;
-        -ms-flex-pack: center;
-        justify-content: center; }
-      .row--justified {
-        -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-        justify-content: space-between; }
-      .row--spaced {
-        -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-        justify-content: space-around; }
-      .row--end {
-        -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-        justify-content: flex-end; }
-      .row--middle {
-        -webkit-align-items: center;
-        -ms-flex-align: center;
-        align-items: center; }
-      .row--bottom {
-        -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-        align-items: flex-end; }
-      .row--top {
-        -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-        align-items: flex-start; } }
+.button--large {
+  padding: 1rem 2rem; }
 
-.column {
-  -webkit-flex-basis: 100%;
-  -ms-flex-preferred-size: 100%;
-  flex-basis: 100%; }
-  @media (min-width: 20rem) {
-    .column {
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1; }
-      .column--20 {
-        -webkit-flex: 2;
-        -ms-flex: 2;
-        flex: 2; }
-      .column--25 {
-        -webkit-flex: 2.5;
-        -ms-flex: 2.5;
-        flex: 2.5; }
-      .column--50 {
-        -webkit-flex: 5;
-        -ms-flex: 5;
-        flex: 5; } }
+.header {
+  background: #e6e6e6; }
 
-.order-1 {
-  flex-order: 1; }
-
-.order-2 {
-  flex-order: 2; }
-
-.order-3 {
-  flex-order: 3; }
-
-.order-4 {
-  flex-order: 4; }
-
-.order-5 {
-  flex-order: 5; }
-
-.order-6 {
-  flex-order: 6; }
-
-.order-7 {
-  flex-order: 7; }
-
-.order-8 {
-  flex-order: 8; }
-
-.order-9 {
-  flex-order: 9; }
-
-.order-10 {
-  flex-order: 10; }
-
-.order-11 {
-  flex-order: 11; }
-
-.order-12 {
-  flex-order: 12; }
-
-.order-13 {
-  flex-order: 13; }
-
-.order-14 {
-  flex-order: 14; }
-
-.order-15 {
-  flex-order: 15; }
-
-.order-16 {
-  flex-order: 16; }
-
-.order-17 {
-  flex-order: 17; }
-
-.order-18 {
-  flex-order: 18; }
-
-.order-19 {
-  flex-order: 19; }
-
-.order-20 {
-  flex-order: 20; }
-
-.order-21 {
-  flex-order: 21; }
-
-.order-22 {
-  flex-order: 22; }
-
-.order-23 {
-  flex-order: 23; }
-
-.order-24 {
-  flex-order: 24; }
-
-.order-25 {
-  flex-order: 25; }
-
-.content {
-  padding: 1rem;
-  margin: 1rem; }
+.footer {
+  background: #e6e6e6; }

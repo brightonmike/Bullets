@@ -56,6 +56,14 @@ $cite-color: $dark-gray;
 $cite-pseudo-content: '\2014 \0020';
 $abbr-underline: 1px dotted $black;
 
+// buttons
+
+$button-padding-topbottom:rem-calc(8);
+$button-padding-leftright:rem-calc(22);
+$button-text-color: $white;
+$button-text-transform: uppercase;
+$button-letter-spacing: 3px;
+
 // Grid
 $desktopbreak:rem-calc(1280);
 $laptopbreak:rem-calc(1024);
