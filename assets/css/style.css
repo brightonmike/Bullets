@@ -444,6 +444,10 @@ body {
 h1 {
   font-size: 24px; }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
 .row {
   display: block; }
   @media (min-width: 20rem) {
@@ -487,11 +491,32 @@ h1 {
         -ms-flex-align: start;
         align-items: flex-start; } }
 
-@media (min-width: 20rem) {
-  .column {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1; } }
+.column {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%; }
+  @media (min-width: 20rem) {
+    .column {
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+      .column--20 {
+        -webkit-flex: 2;
+        -ms-flex: 2;
+        flex: 2; }
+      .column--25 {
+        -webkit-flex: 2.5;
+        -ms-flex: 2.5;
+        flex: 2.5; }
+      .column--50 {
+        -webkit-flex: 5;
+        -ms-flex: 5;
+        flex: 5; } }
+
+.column--20 {
+  -webkit-flex: 2;
+  -ms-flex: 2;
+  flex: 2; }
 
 .order-1 {
   flex-order: 1; }
