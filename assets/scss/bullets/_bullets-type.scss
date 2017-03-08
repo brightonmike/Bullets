@@ -1,71 +1,202 @@
 h1,h2,h3,h4,h5,h6 {
-
+	line-height:$header-line-height;
 }
 
 h1 {
 	font-size:$h1-base-size;
-	
-	@include breakpoint(phablet) {
-		
-	}
 
 	@include breakpoint(tablet) {
-
+		font-size:round($h1-base-size*1.2);
 	}	
 
 	@include breakpoint(laptop) {
-
+		font-size:round($h1-base-size*1.4);
 	}	
 
 	@include breakpoint(desktop) {
-
+		font-size:round($h1-base-size*2.1);
 	}
 }
 
 h2 {
+	font-size:$h1-base-size;
 
+	@include breakpoint(tablet) {
+		font-size:round($h2-base-size*1.2);
+	}	
+
+	@include breakpoint(laptop) {
+		font-size:round($h2-base-size*1.4);
+	}	
+
+	@include breakpoint(desktop) {
+		font-size:round($h2-base-size*2.1);
+	}	
 }
 
 h3 {
+	font-size:$h3-base-size;
 
+	@include breakpoint(tablet) {
+		font-size:round($h3-base-size*1.2);
+	}	
+
+	@include breakpoint(laptop) {
+		font-size:round($h3-base-size*1.4);
+	}	
+
+	@include breakpoint(desktop) {
+		font-size:round($h3-base-size*2.1);
+	}	
 }
 
 h4 {
+	font-size:$h4-base-size;
 
+	@include breakpoint(tablet) {
+		font-size:round($h4-base-size*1.2);
+	}	
+
+	@include breakpoint(laptop) {
+		font-size:round($h4-base-size*1.4);
+	}	
+
+	@include breakpoint(desktop) {
+		font-size:round($h4-base-size*2.1);
+	}	
 }
 
 h5 {
+	font-size:$h5-base-size;
 
+	@include breakpoint(tablet) {
+		font-size:round($h5-base-size*1.2);
+	}	
+
+	@include breakpoint(laptop) {
+		font-size:round($h5-base-size*1.4);
+	}	
+
+	@include breakpoint(desktop) {
+		font-size:round($h5-base-size*2.1);
+	}	
 }
 
 h6 {
+	font-size:$h6-base-size;
 
+	@include breakpoint(tablet) {
+		font-size:round($h6-base-size*1.2);
+	}	
+
+	@include breakpoint(laptop) {
+		font-size:round($h6-base-size*1.4);
+	}	
+
+	@include breakpoint(desktop) {
+		font-size:round($h6-base-size*2.1);
+	}	
 }
 
 
 p {
-
+	color: $text-color;
+	font-size: $global-font-size;
+	font-family: $global-font-family;
+	font-weight: $global-font-weight;
+	line-height:$paragraph-line-height;
 }
 
 
 
-ul, ol {
-
+// Lists
+ul,
+ol,
+dl {
+	margin-bottom: $list-margin-bottom;
+	list-style-position: $list-style-position;
+	line-height: $list-lineheight;
 }
 
+// List items
+li {
+	font-size: inherit;
+}
+
+// Unordered lists
 ul {
-
+	margin-#{$global-left}: $list-side-margin;
+	list-style-type: $list-style-type;
 }
 
+// Ordered lists
 ol {
-
+	margin-#{$global-left}: $list-side-margin;
 }
 
+// Nested unordered/ordered lists
+ul, ol {
+	& & {
+		margin-#{$global-left}: $list-nested-side-margin;
+		margin-bottom: 0;
+	}
+}
 
+// Definition lists
+dl {
+	margin-bottom: $defnlist-margin-bottom;
+
+	dt {
+		margin-bottom: $defnlist-term-margin-bottom;
+		font-weight: $defnlist-term-weight;
+	}
+}
+
+// Blockquotes
 blockquote {
+	margin: 0 0 $paragraph-margin-bottom;
+	padding: $blockquote-padding;
+	border-#{$global-left}: $blockquote-border;
 
+	&, p {
+		line-height: $paragraph-line-height;
+		color: $blockquote-color;
+	}
 }
 
+// Citations
 cite {
-	
+	display: block;
+	font-size: $cite-font-size;
+	color: $cite-color;
+
+	&:before {
+		content: $cite-pseudo-content;
+	}
+}
+
+// Abbreviations
+abbr {
+	border-bottom: $abbr-underline;
+	color: $text-color;
+	cursor: help;
+}
+
+// Figures
+figure {
+	margin: 0;
+}
+
+// Horizontal rule
+hr {
+	clear: both;
+
+	max-width: 100%;
+	height: 0;
+	margin: $global-margin;
+
+	border-top: 0;
+	border-right: 0;
+	border-bottom:1px;
+	border-left: 0;
 }
