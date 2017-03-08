@@ -4,7 +4,7 @@
 }
 
 .row {
-	display:block;
+	display:inline-block;
 
 	@media (min-width:$grid-break-point){
 		display:flex;
@@ -52,7 +52,9 @@
 }
 
 .column {
-	flex-basis: 100%;
+	padding-left:$global-padding/2;
+	padding-right:$global-padding/2;
+	margin:0 auto;
 
 	@media (min-width:$grid-break-point){
 		flex-basis:auto;
