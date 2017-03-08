@@ -51,3 +51,10 @@
 		flex:1;
 	}
 }
+
+// Source ordering
+@for $i from 1 through 25 {
+  .order-#{$i} {
+    flex-order:#{$i};
+  }
+}

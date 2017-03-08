@@ -1,4 +1,14 @@
+@import "mixins";
 @import "settings";
+
+// import normalize.css
+@import "normalize/normalize";
 
 // import the bullets
 
+@import "bullets/bullets-base";
+@import "bullets/bullets-type";
+@import "bullets/bullets-grid";
+@import "bullets/bullets-colour";
+@import "bullets/bullets-inputs";
+@import "bullets/bullets-button";
