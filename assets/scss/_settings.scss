@@ -1,11 +1,21 @@
 // Global
+$global-font-family:'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+$global-font-size:16px;
+$global-font-weight:300;
+$text-color:#222222;
 
+$global-margin: 1rem;
+$global-padding: 1rem;
 
 // Typography
-
+$h1-base-size:24px;
+$h2-base-size:22px;
+$h3-base-size:20px;
+$h4-base-size:18px;
+$h5-base-size:18px;
+$h6-base-size:16px;
 
 // Colour Scheme
-
 $primary: #1779ba;
 $secondary: #767676;
 $success: #3adb76;
@@ -13,5 +23,11 @@ $warning: #ffae00;
 $alert: #cc4b37;
 
 // Grid
+$desktopbreak:rem-calc(1280);
+$laptopbreak:rem-calc(1024);
+$tabletbreak:rem-calc(768);
+$phabletbreak:rem-calc(460);
+$mobilebreak:rem-calc(320);
 
-$grid-break-point: 768px; // this is the width at which you want the fexbox grid to kick in - below this width will be single column
+$grid-break-point: $mobilebreak;
+// this is the width at which you want the fexbox grid to kick in - below this width will be single column

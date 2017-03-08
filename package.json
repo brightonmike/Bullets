@@ -10,7 +10,6 @@
   "license": "GPL-2.0 AND MIT",
   "homepage": "",
   "devDependencies": {
-    "normalize.css" : "^5.0.0", 
     "babel-preset-es2015": "^6.5.0",
     "browser-sync": "^2.11.0",
     "gulp": "^3.9.0",
