@@ -434,12 +434,73 @@ template {
 [hidden] {
   display: none; }
 
+.entry-content img {
+  max-width: 100%;
+  height: auto; }
+
+.entry-content .alignleft, .entry-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left; }
+
+.entry-content .alignright, .entry-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right; }
+
+.entry-content .aligncenter, .entry-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both; }
+
+.entry-content video, .entry-content object {
+  max-width: 100%;
+  height: auto; }
+
+.entry-content pre {
+  background: #eee;
+  border: 1px solid #cecece;
+  padding: 10px; }
+
+.wp-caption {
+  max-width: 100%;
+  background: #eee;
+  padding: 5px;
+  display: inline-block; }
+  @media (max-width: 768px) {
+    .wp-caption {
+      width: 100% !important;
+      height: auto; } }
+  .wp-caption img {
+    max-width: 100%;
+    margin-bottom: 0;
+    width: 100%; }
+    @media (max-width: 768px) {
+      .wp-caption img {
+        height: auto; } }
+  .wp-caption p.wp-caption-text {
+    font-size: 0.85em;
+    margin: 4px 0 7px;
+    text-align: center; }
+
+/*/ https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ /*/
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
 body {
   color: #222222;
   font-size: 16px;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.6; }
+
+img {
+  max-width: 100%;
+  display: inline-block; }
 
 h1 {
   font-size: 24px; }
@@ -512,11 +573,6 @@ h1 {
         -webkit-flex: 5;
         -ms-flex: 5;
         flex: 5; } }
-
-.column--20 {
-  -webkit-flex: 2;
-  -ms-flex: 2;
-  flex: 2; }
 
 .order-1 {
   flex-order: 1; }
@@ -592,3 +648,7 @@ h1 {
 
 .order-25 {
   flex-order: 25; }
+
+.content {
+  padding: 1rem;
+  margin: 1rem; }
