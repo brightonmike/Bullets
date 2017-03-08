@@ -4,6 +4,7 @@
 }
 
 .row {
+	width:100%;
 	display:inline-block;
 
 	@media (min-width:$grid-break-point){
