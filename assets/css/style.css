@@ -446,7 +446,7 @@ h1 {
 
 .row {
   display: block; }
-  @media (min-width: -zf-to-rem(320, 16px)) {
+  @media (min-width: 20rem) {
     .row {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -487,7 +487,7 @@ h1 {
         -ms-flex-align: start;
         align-items: flex-start; } }
 
-@media (min-width: -zf-to-rem(320, 16px)) {
+@media (min-width: 20rem) {
   .column {
     -webkit-flex: 1;
     -ms-flex: 1;
