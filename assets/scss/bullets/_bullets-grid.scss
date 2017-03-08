@@ -55,18 +55,22 @@
 	flex-basis: 100%;
 
 	@media (min-width:$grid-break-point){
-		flex:1;
+		flex-basis:auto;
 
 		&--20 {
-			flex: 2;
+			flex-basis:20%;
 		}
 
 		&--25 {
-			flex: 2.5;
+			flex-basis:25%;
 		}
 
 		&--50 {
-			flex: 5;
+			flex-basis:50%;
+		}
+
+		&--expand {
+			flex-grow:1;
 		}
 
 	}
