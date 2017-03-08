@@ -1,11 +1,7 @@
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
-@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
-	background-color: $to;
-	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
-	background-image: -webkit-linear-gradient(top, $from, $to);
-	background-image: -moz-linear-gradient(top, $from, $to);
-	background-image: -o-linear-gradient(top, $from, $to);
-	background-image: linear-gradient(to bottom, $from, $to);
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8, $direction: to bottom) {
+  background-color: $to;
+  background-image: linear-gradient($direction, $from, $to);
 }
 
 

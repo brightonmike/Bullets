@@ -4,6 +4,7 @@
 }
 
 .row {
+	width:100%;
 	display:inline-block;
 
 	@media (min-width:$grid-break-point){
@@ -67,9 +68,17 @@
 			flex-basis:25%;
 		}
 
+		&--33 {
+			flex-basis:33.34%;
+		}			
+
 		&--50 {
 			flex-basis:50%;
 		}
+
+		&--66 {
+			flex-basis:66.67%;
+		}		
 
 		&--expand {
 			flex-grow:1;
