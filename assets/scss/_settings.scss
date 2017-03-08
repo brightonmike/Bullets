@@ -1,12 +1,31 @@
 // Global
 $global-font-family:'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $global-font-size:16px;
+$global-line-height:1.2;
 $global-font-weight:300;
 $text-color:#222222;
 $global-width:1200px;
 
 $global-margin: 1rem;
 $global-padding: 1rem;
+$global-left: 1rem;
+
+$global-weight-normal: 300;
+$global-weight-bold: 700;
+
+
+// Colour Scheme
+$primary: #1779ba;
+$secondary: #767676;
+$success: #3adb76;
+$warning: #ffae00;
+$alert: #cc4b37;
+
+$light-gray: #e6e6e6;
+$medium-gray: #cacaca;
+$dark-gray: #8a8a8a;
+$black: #0a0a0a;
+$white: #fefefe;
 
 // Typography
 $h1-base-size:24px;
@@ -16,12 +35,26 @@ $h4-base-size:18px;
 $h5-base-size:18px;
 $h6-base-size:16px;
 
-// Colour Scheme
-$primary: #1779ba;
-$secondary: #767676;
-$success: #3adb76;
-$warning: #ffae00;
-$alert: #cc4b37;
+$header-line-height:1.2;
+$paragraph-line-height:1.6;
+$paragraph-margin-bottom:1.2rem;
+
+$list-lineheight: $paragraph-line-height;
+$list-margin-bottom: $paragraph-margin-bottom;
+$list-style-type: disc;
+$list-style-position: outside;
+$list-side-margin: 1.25rem;
+$list-nested-side-margin: 1.25rem;
+$defnlist-margin-bottom: 1rem;
+$defnlist-term-weight: $global-weight-bold;
+$defnlist-term-margin-bottom: 0.3rem;
+$blockquote-color: $dark-gray;
+$blockquote-padding: rem-calc(9 20 0 19);
+$blockquote-border: 1px solid $medium-gray;
+$cite-font-size: rem-calc(13);
+$cite-color: $dark-gray;
+$cite-pseudo-content: '\2014 \0020';
+$abbr-underline: 1px dotted $black;
 
 // Grid
 $desktopbreak:rem-calc(1280);

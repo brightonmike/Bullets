@@ -1,17 +1,17 @@
 /*/ https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ /*/
 html {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 body {
-  color: $text-color;
-  font-size: $global-font-size;
-  font-family: $global-font-family;
-  font-weight: $global-font-weight;
-  line-height: 1.6;
+	color: $text-color;
+	font-size: $global-font-size;
+	font-family: $global-font-family;
+	font-weight: $global-font-weight;
+	line-height: $global-line-height;
 }
 
 img {
