@@ -125,19 +125,19 @@ li {
 
 // Unordered lists
 ul {
-	margin-#{$global-left}: $list-side-margin;
+	margin-left: $list-side-margin;
 	list-style-type: $list-style-type;
 }
 
 // Ordered lists
 ol {
-	margin-#{$global-left}: $list-side-margin;
+	margin-left: $list-side-margin;
 }
 
 // Nested unordered/ordered lists
 ul, ol {
 	& & {
-		margin-#{$global-left}: $list-nested-side-margin;
+		margin-left: $list-nested-side-margin;
 		margin-bottom: 0;
 	}
 }
@@ -156,7 +156,7 @@ dl {
 blockquote {
 	margin: 0 0 $paragraph-margin-bottom;
 	padding: $blockquote-padding;
-	border-#{$global-left}: $blockquote-border;
+	border-left: $blockquote-border;
 
 	&, p {
 		line-height: $paragraph-line-height;

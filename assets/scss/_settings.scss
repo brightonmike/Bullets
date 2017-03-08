@@ -6,8 +6,8 @@ $global-font-weight:300;
 $text-color:#222222;
 $global-width:1200px;
 
-$global-margin: 1rem;
-$global-padding: 1rem;
+$global-margin: 2rem;
+$global-padding: 2rem;
 $global-left: 1rem;
 
 $global-weight-normal: 300;
@@ -71,5 +71,5 @@ $tabletbreak:rem-calc(768);
 $phabletbreak:rem-calc(460);
 $mobilebreak:rem-calc(320);
 
-$grid-break-point: $mobilebreak;
+$grid-break-point:rem-calc(768);
 // this is the width at which you want the fexbox grid to kick in - below this width will be single column
