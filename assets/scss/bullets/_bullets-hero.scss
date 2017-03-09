@@ -1,0 +1,16 @@
+.hero {
+	background-color:$dark-gray;
+	padding:rem-calc(100 0);
+
+	@include breakpoint(tablet) {
+		padding:rem-calc(140 0);
+	}
+
+	@include breakpoint(desktop) {
+		padding:rem-calc(160 0);
+	}		
+
+	h1, h2, h3, p {
+		color:$white;
+	}
+}

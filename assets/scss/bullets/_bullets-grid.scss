@@ -4,7 +4,8 @@
 }
 
 .row {
-	display:block;
+	width:100%;
+	display:inline-block;
 
 	@media (min-width:$grid-break-point){
 		display:flex;
@@ -52,21 +53,35 @@
 }
 
 .column {
-	flex-basis: 100%;
+	padding-left:$global-padding/2;
+	padding-right:$global-padding/2;
+	margin:0 auto;
 
 	@media (min-width:$grid-break-point){
-		flex:1;
+		flex-basis:auto;
 
 		&--20 {
-			flex: 2;
+			flex-basis:20%;
 		}
 
 		&--25 {
-			flex: 2.5;
+			flex-basis:25%;
 		}
 
+		&--33 {
+			flex-basis:33.34%;
+		}			
+
 		&--50 {
-			flex: 5;
+			flex-basis:50%;
+		}
+
+		&--66 {
+			flex-basis:66.67%;
+		}		
+
+		&--expand {
+			flex-grow:1;
 		}
 
 	}
