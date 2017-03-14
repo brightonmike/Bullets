@@ -60,28 +60,39 @@
 	@media (min-width:$grid-break-point){
 		flex-basis:auto;
 
+		&--10 {
+			flex-basis:10%;
+			max-width:10%;
+		}
+
 		&--20 {
 			flex-basis:20%;
+			max-width:20%;
 		}
 
 		&--25 {
 			flex-basis:25%;
+			max-width:25%;
 		}
 
 		&--33 {
 			flex-basis:33.34%;
+			max-width:33.34%;
 		}			
 
 		&--50 {
 			flex-basis:50%;
+			max-width:50%;
 		}
 
 		&--66 {
-			flex-basis:66.67%;
+			flex-basis:66.66%;
+			max-width:66.66%;
 		}		
 
 		&--expand {
 			flex-grow:1;
+			max-width:100%;
 		}
 
 	}
