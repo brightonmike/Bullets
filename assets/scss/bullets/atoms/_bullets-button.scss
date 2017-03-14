@@ -1,0 +1,81 @@
+button, [type='submit'], .button {
+	display: inline-block;
+	padding: $button-padding-topbottom $button-padding-leftright;
+	background: $text-color;
+	color: $button-text-color;
+
+	text-decoration:none;
+	text-transform: $button-text-transform;
+	letter-spacing: $button-letter-spacing;
+	font-weight: $global-weight-bold;
+	font-size: $button-font-size;
+
+	transition:all 0.2s ease;
+
+	@if $button-rounded == true {
+		border-radius: $button-border-radius;
+	}
+
+	&:hover {
+		background: darken($text-color, 5%);
+		color: $button-text-color;		
+	}
+
+	&.button--large {
+		padding: $button-padding-topbottom*1.4 $button-padding-leftright*1.3;
+	}
+}
+
+
+.button--primary {
+	background: $primary;
+	color: $white;
+
+	&:hover {
+		background: darken($primary, 5%);
+		color:$white;
+	}
+}
+
+.button--white {
+	background: $white;
+	color: $primary;
+
+	&:hover {
+		background: darken($white, 10%);
+		color:$primary;
+	}
+}
+
+.button--hollow {
+	background:none;	
+	border: 2px solid $text-color;
+	color: $text-color;
+
+	&:hover {
+		background:$text-color;
+	}
+
+	&.button--primary {
+		border: 2px solid $primary;
+		color: $primary;	
+
+		&:hover {
+			background:$primary;
+			color:$white;
+		}
+
+	}
+
+	&.button--white {
+		border: 2px solid $white;
+		color: $white;	
+
+		&:hover {
+			background:$white;
+			color:$primary;
+		}
+
+	}
+
+}
