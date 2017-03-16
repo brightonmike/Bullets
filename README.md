@@ -13,7 +13,7 @@ If you find yourself removing 80% of what comes with a frame work - give Bullets
 
 - Get started by tweaking the settings in settings.scss
 - Go ahead and edit the partials directly - or if you want to leave them be - drop in your own Sass file structure. I recommend Aotmic Design approach which makes sense even for small scale projects.
-- A basic grid is as simple as a row containing columns. Use the percent classes to control widths and the container class for a max width.
+- Bullets has a 12 column grid with column classes for mobile, tablet and desktop, with the breakpoints of these controllable seprate to your media queries (though using the mqs by default).
 
 ### Getting Started With Gulp
 - Run npm install
