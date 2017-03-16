@@ -3,6 +3,8 @@
 Bullets
 =======
 
+npm install bulletswp
+
 Bullets is a free WordPress skeleton theme. It contains just about enough Sass to get you started on your next project - but without being a highly comprehensive frame work such as Foundation or Bootstrap.
 
 If you need a frame work with all the bells and whistles - Bullets is not the tool for you.
@@ -16,8 +18,6 @@ If you find yourself removing 80% of what comes with a frame work - give Bullets
 - A basic grid is as simple as a row containing columns. Use the percent classes to control widths and the container class for a max width.
 
 ### Getting Started With Gulp
-- Install [node.js](https://nodejs.org).
-- Using the command line, navigate to your theme directory
 - Run npm install
 - Run gulp to confirm everything is working
 
