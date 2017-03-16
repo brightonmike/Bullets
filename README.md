@@ -3,8 +3,6 @@
 Bullets
 =======
 
-npm install bulletswp
-
 Bullets is a free WordPress skeleton theme. It contains just about enough Sass to get you started on your next project - but without being a highly comprehensive frame work such as Foundation or Bootstrap.
 
 If you need a frame work with all the bells and whistles - Bullets is not the tool for you.
