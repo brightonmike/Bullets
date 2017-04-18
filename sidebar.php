@@ -1,4 +1,4 @@
-<div id="sidebar1" role="complementary">
+<div class="column column-m-12 column-t-5 column-d-4" role="complementary">
 
 	<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 
