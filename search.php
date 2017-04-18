@@ -2,7 +2,7 @@
 	
 	<main role="main">
 		<header>
-			<h1 class="archive-title"><?php _e( 'Search Results for:', 'bullets' ); ?> <?php echo esc_attr(get_search_query()); ?></h1>
+			<h1><?php _e( 'Search Results for:', 'bullets' ); ?> <?php echo esc_attr(get_search_query()); ?></h1>
 		</header>
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
