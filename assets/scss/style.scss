@@ -1,1 +1,10 @@
 @import "settings";
+@import "../../node_modules/bullets-sass/scss/style";
+
+@include bullets-grid;
+@include bullets-type;
+@include bullets-links;
+@include bullets-button;
+@include bullets-forms;
+@include bullets-image;
+@include bullets-embed;
