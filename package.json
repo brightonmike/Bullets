@@ -28,6 +28,6 @@
     "jshint-stylish": "^2.0.0",
     "stylelint": "^7.3.1",
     "stylelint-config-standard": "^13.0.2",
-    "bullets-sass": "^1.0.0"    
+    "bullets-sass": "^1.11.0"    
   }
 }
