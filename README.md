@@ -5,7 +5,7 @@ Bullets
 
 Bullets is a free WordPress skeleton theme. It contains just about enough Sass to get you started on your next project - but without being a highly comprehensive frame work such as Foundation or Bootstrap.
 
-If you need a frame work with all the bells and whistles - Bullets is not the tool for you. There are no carousels, no complex variations to serve every possible need. 
+If you need a frame work with all the bells and whistles - Bullets is not the tool for you. There are no carousels, no complex variations to serve every possible need.
 
 If you find yourself removing 80% of what comes with a frame work - give Bullets a try.
 
@@ -16,8 +16,8 @@ If you find yourself removing 80% of what comes with a frame work - give Bullets
 - Bullets has a 12 column grid with column classes for mobile, tablet and desktop, with the breakpoints of these controllable seperate to your media queries (though using the mqs by default).
 
 ### Getting Started With Gulp
-- Run npm install
-- Run gulp to confirm everything is working
+- Run `npm update --save-dev` to update package.json dependencies to the latest and download the latest node modules.
+- Run `gulp` to confirm everything is working
 
 ### Contribute
 
