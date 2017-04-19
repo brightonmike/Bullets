@@ -12,8 +12,8 @@ If you find yourself removing 80% of what comes with a frame work - give Bullets
 ### Basic Docs
 
 - Get started by tweaking the settings in settings.scss
-- Go ahead and edit the partials directly - or if you want to leave them be - drop in your own Sass file structure. I recommend Aotmic Design approach which makes sense even for small scale projects.
-- Bullets has a 12 column grid with column classes for mobile, tablet and desktop, with the breakpoints of these controllable seprate to your media queries (though using the mqs by default).
+- You can remove or add the mixins in the style.scss file to only include what you need.
+- Bullets has a 12 column grid with column classes for mobile, tablet and desktop, with the breakpoints of these controllable seperate to your media queries (though using the mqs by default).
 
 ### Getting Started With Gulp
 - Run npm install
