@@ -1,14 +1,10 @@
 @import "settings";
 @import "../../node_modules/bullets-sass/scss/style";
 
-@include bullets-grid;
 @include bullets-type;
 @include bullets-table;
 @include bullets-links;
 @include bullets-button;
 @include bullets-forms;
-@include bullets-image;
-@include bullets-embed;
-@include bullets-wordpress;
 
-@import "main";
+@import "login-styles";
