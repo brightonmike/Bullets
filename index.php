@@ -8,12 +8,11 @@
 	    		<div class="column column-m-12 column-t-7 column-d-8">
 					<?php get_template_part( 'parts/loop', 'archive' ); ?>
 				</div>
-				<?php get_sidebar(); ?>
 			</div>
 		    
 		<?php endwhile; ?>	
 
-			<?php bullets_page_navi(); ?>
+			<?php //bullets_page_navi(); ?>
 			
 		<?php else : ?>
 
