@@ -30,22 +30,21 @@ gulp.task('styles', function() {
         }))
         .pipe(gulp.dest('./assets/css/'))
         .pipe(rename({suffix: '.min'}))
-        //.pipe(cssnano())  --- Don't really need a seperate module for this. You can minify the CSS with sass outputStyle
         .pipe(sourcemaps.write('.')) // Creates sourcemaps for minified styles
         .pipe(gulp.dest('./assets/css/'))
 });
 
 
-gulp.task('gunner-js', function() {
+gulp.task('bullets-js', function() {
   return gulp.src([
-
+    './assets/app/*.js',
   ])
 	.pipe(babel({
 		presets: ['es2015'],
 	    compact: true
 	}))
     .pipe(sourcemaps.init())
-    .pipe(concat('gunner.js'))
+    .pipe(concat('bullets.js'))
     .pipe(gulp.dest('./assets/js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
@@ -59,7 +58,7 @@ gulp.task('browsersync', function() {
     // Watch files
     var files = [
     	'./assets/css/*.css',
-    	'./assets/js/*.js',
+    	'./assets/app/*.js',
     	'**/*.php',
     	'assets/images/**/*.{png,jpg,gif,svg,webp}',
     ];
@@ -70,7 +69,7 @@ gulp.task('browsersync', function() {
     });
 
     gulp.watch('./assets/scss/**/*.scss', ['styles']);
-   // gulp.watch('./assets/js/scripts/*.js', ['site-js']).on('change', browserSync.reload);
+    gulp.watch('./assets/app/*.js', ['bullets-js']).on('change', browserSync.reload);
 
 });
 
@@ -80,11 +79,11 @@ gulp.task('watch', function() {
   // Watch .scss files
   gulp.watch('./assets/scss/**/*.scss', ['styles']);
 
-  // Watch site-js files
-  //gulp.watch('./assets/js/scripts/*.js', ['site-js']);
+  // Watch bullets-js files
+  gulp.watch('./assets/app/*.js', ['bullets-js']);
 
 
 });
 
-// Run styles and gunner-js
-gulp.task('default', ['styles', 'gunner-js']);
+// Run styles and bullets-js
+gulp.task('default', ['styles', 'bullets-js']);
