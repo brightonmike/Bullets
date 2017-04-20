@@ -2,7 +2,7 @@
 var gulp  = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-sass'),
-    cssnano = require('gulp-cssnano'),
+    //cssnano = require('gulp-cssnano'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
     jshint = require('gulp-jshint'),
@@ -23,21 +23,21 @@ gulp.task('styles', function() {
             this.emit('end');
         }))
         .pipe(sourcemaps.init()) // Start Sourcemaps
-        .pipe(sass())
+        .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(autoprefixer({
             browsers: ['last 5 versions'],
             cascade: false
         }))
         .pipe(gulp.dest('./assets/css/'))
         .pipe(rename({suffix: '.min'}))
-        .pipe(cssnano())
+        //.pipe(cssnano())  --- Don't really need a seperate module for this. You can minify the CSS with sass outputStyle
         .pipe(sourcemaps.write('.')) // Creates sourcemaps for minified styles
         .pipe(gulp.dest('./assets/css/'))
 });
-    
+
 
 gulp.task('gunner-js', function() {
-  return gulp.src([	
+  return gulp.src([
 
   ])
 	.pipe(babel({
@@ -49,16 +49,16 @@ gulp.task('gunner-js', function() {
     .pipe(gulp.dest('./assets/js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())
-    .pipe(sourcemaps.write('.')) // Creates sourcemap for minified Foundation JS
+    .pipe(sourcemaps.write('.')) // Creates sourcemap for minified JS
     .pipe(gulp.dest('./assets/js'))
-}); 
+});
 
 
 // Browser-Sync watch files and inject changes
 gulp.task('browsersync', function() {
     // Watch files
     var files = [
-    	'./assets/css/*.css', 
+    	'./assets/css/*.css',
     	'./assets/js/*.js',
     	'**/*.php',
     	'assets/images/**/*.{png,jpg,gif,svg,webp}',
@@ -68,7 +68,7 @@ gulp.task('browsersync', function() {
 	    // Replace with URL of your local site
 	    proxy: "http://localhost/",
     });
-    
+
     gulp.watch('./assets/scss/**/*.scss', ['styles']);
    // gulp.watch('./assets/js/scripts/*.js', ['site-js']).on('change', browserSync.reload);
 
@@ -84,9 +84,7 @@ gulp.task('watch', function() {
   //gulp.watch('./assets/js/scripts/*.js', ['site-js']);
 
 
-}); 
-
-// Run styles, site-js and foundation-js
-gulp.task('default', function() {
-  gulp.start('styles');
 });
+
+// Run styles and gunner-js
+gulp.task('default', ['styles', 'gunner-js']);
