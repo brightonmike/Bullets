@@ -11,11 +11,8 @@ require_once(get_template_directory().'/assets/functions/enqueue-scripts.php');
 // Register custom menus and menu walkers
 require_once(get_template_directory().'/assets/functions/menu.php'); 
 
-// Register sidebars/widget areas
-//require_once(get_template_directory().'/assets/functions/sidebar.php'); 
-
-// Replace 'older/newer' post links with numbered navigation
-require_once(get_template_directory().'/assets/functions/page-navi.php'); 
+// Replace 'older/newer' post links with numbered navigation - this function is due for a re-write
+//require_once(get_template_directory().'/assets/functions/page-navi.php'); 
 
 // Remove 4.2 Emoji Support
 require_once(get_template_directory().'/assets/functions/disable-emoji.php'); 

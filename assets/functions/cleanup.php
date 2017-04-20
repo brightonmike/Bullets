@@ -16,10 +16,7 @@ function bullets_start() {
     
     // clean up gallery output in wp
     add_filter('gallery_style', 'bullets_gallery_style');
-    
-    // adding sidebars to Wordpress
-    add_action( 'widgets_init', 'bullets_register_sidebars' );
-    
+
     // cleaning up excerpt
     add_filter('excerpt_more', 'bullets_excerpt_more');
 
