@@ -5,7 +5,7 @@ Bullets
 
 Bullets is a free WordPress skeleton theme. It contains just about enough Sass to get you started on your next project - but without being a highly comprehensive frame work such as Foundation or Bootstrap.
 
-If you need a frame work with all the bells and whistles - Bullets is not the tool for you. There are no carousels, no complex variations to serve every possible need.
+If you need a frame work with all the bells and whistles - Bullets is not the tool for you. There are no carousels, no complex variations to serve every possible need. Bullets does not come with much in the way of styling.
 
 If you find yourself removing 80% of what comes with a frame work - give Bullets a try.
 
@@ -22,3 +22,8 @@ If you find yourself removing 80% of what comes with a frame work - give Bullets
 ### Contribute
 
 If you want to contribute - feel free. All pull requests considered. However, the aim of Bullets is to be light weight and skinny, so feature requests will always bare this in mind.
+
+
+### Sites built with Bullets
+
+- TBU
