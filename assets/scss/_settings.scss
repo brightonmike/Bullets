@@ -28,13 +28,50 @@ $dark-gray: #8a8a8a;
 $black: #0a0a0a;
 $white: #fefefe;
 
-// Typography
-$h1-base-size:24px;
-$h2-base-size:22px;
-$h3-base-size:20px;
-$h4-base-size:18px;
-$h5-base-size:18px;
-$h6-base-size:16px;
+// Typography - null is effectively mobile
+
+$h1-font-sizes: (
+  null  : 28px,
+  tablet : 31px,
+  laptop: 33px,
+  desktop : 36px
+);
+
+$h2-font-sizes: (
+  null  : 28px,
+  tablet : 31px,
+  laptop: 33px,
+  desktop : 36px
+);
+
+$h3-font-sizes: (
+  null  : 28px,
+  tablet : 31px,
+  laptop: 33px,
+  desktop : 36px
+);
+
+$h4-font-sizes: (
+  null  : 28px,
+  tablet : 31px,
+  laptop: 33px,
+  desktop : 36px
+);
+
+$h5-font-sizes: (
+  null  : 28px,
+  tablet : 31px,
+  laptop: 33px,
+  desktop : 36px
+);
+
+$h6-font-sizes: (
+  null  : 28px,
+  tablet : 31px,
+  laptop: 33px,
+  desktop : 36px
+);
+
 
 $header-font-family:'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 $header-line-height:1.2;
@@ -67,15 +104,28 @@ $input-focus-color:$primary;
 $input-focus-border-color:$primary;
 
 // buttons
-
-$button-padding-topbottom:rem-calc(14);
-$button-padding-leftright:rem-calc(40);
+$button-padding-topbottom: 14px;
+$button-padding-leftright: 40px;
+$button-background: $primary;
 $button-text-color: $white;
 $button-text-transform: uppercase;
 $button-letter-spacing: 3px;
 $button-font-size:rem-calc(14);
 $button-rounded:true;
 $button-border-radius:40px;
+
+// tables
+$table-striped: even;
+$table-striped-background: $light-gray;
+$table-header-background: #eeeeee;
+$table-header-padding: rem-calc(10 12 10 12);
+$table-header-weight: $global-weight-bold;
+$table-body-background: #ffffff;
+$table-body-padding: rem-calc(10 12 10 12);
+$table-body-weight: $global-weight-normal;
+$table-footer-background: #eeeeee;
+$table-footer-padding: rem-calc(10 12 10 12);
+$table-footer-weight: $global-weight-normal;
 
 // Grid
 $desktopbreak:rem-calc(1280);
@@ -84,5 +134,19 @@ $tabletbreak:rem-calc(768);
 $phabletbreak:rem-calc(460);
 $mobilebreak:rem-calc(320);
 
-$grid-break-point:rem-calc(768);
+// map the breakpoints
+$breakpoints: (
+	mobile-min: $mobilebreak,
+	phablet-min: $phabletbreak,
+	tablet-min: $tabletbreak,
+	laptop-min: $laptopbreak,
+	desktop-min: $desktopbreak,
+	mobile-max: $phabletbreak - 1,
+	phablet-max: $tabletbreak - 1,
+	tablet-max: $laptopbreak - 1,
+	laptop-max: $desktopbreak - 1,
+);
+
+$grid-break-point-tablet:$tabletbreak;
+$grid-break-point-desktop:$laptopbreak;
 // this is the width at which you want the fexbox grid to kick in - below this width will be single column
