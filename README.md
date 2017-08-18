@@ -60,3 +60,22 @@ By default, Bullets is full width. Use the container class to constrain width.
 ```
 
 If you want to save mark-up, you can add it to the `row` element.
+
+### Alignment
+
+Use the row modifier classes to change alignment.
+
+Horizontal:
+```
+.row--justified
+.row--spaced
+.row--end
+.row--center
+```
+
+Vertical:
+```
+.row--middle
+.row--bottom
+.row--top
+```
