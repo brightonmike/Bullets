@@ -79,3 +79,22 @@ Vertical:
 .row--bottom
 .row--top
 ```
+
+Buttons
+=======
+
+Bullets comes with a basic button component. You can adjust settings, including whether or not the button has a radius, in `settings.scss`.
+
+### Markup
+
+```
+<button class="button">
+  Button text
+</button>
+```
+
+Strictly speaking, buttons should be buttons and links should be links. However, you can add the `.button` class to a link too. 
+
+### Hollow 
+
+Make a button hollow by adding the `.button--hollow` class.
