@@ -98,3 +98,8 @@ Strictly speaking, buttons should be buttons and links should be links. However,
 ### Hollow 
 
 Make a button hollow by adding the `.button--hollow` class.
+
+Flexible Embeds
+===============
+
+Bullets comes with an `.embed` class. Add this to a `<div>` containing a video iframe or other object, and it will behave responsively. You may need to tweak to padding of `.embed` depending on aspect ratio.
