@@ -34,5 +34,29 @@ Grid
 
 The Bullets grid is flexbox based, with browser support extended through Gulp.
 
-  Columns
-  
+### Mark-up
+
+```
+<div class="row">
+  <div class="column column-m-12 column-t-6 columm-d-4">
+  </div>
+  <div class="column column-m-12 column-t-6 columm-d-4">
+  </div>
+  <div class="column column-m-12 column-t-6 columm-d-4">
+  </div>  
+</div>
+```
+
+Although the class names suggest "m" mobile, "t" tablet and "d" desktop, you should approach the use of the grid in a device agnostic manner.
+
+### Constrain width
+
+By default, Bullets is full width. Use the container class to constrain width.
+
+```
+<div class="container">
+  <!-- grid -->
+</div>
+```
+
+If you want to save mark-up, you can add it to the `row` element.
