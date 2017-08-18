@@ -32,7 +32,7 @@ If you want to contribute - feel free. All pull requests considered. However, th
 Grid
 ====
 
-The Bullets grid is flexbox based, with browser support extended through Gulp.
+The Bullets grid is flexbox based, with browser support extended through Gulp. The grid is a tool and is as lightweight as possible. You should strongly consider when/how you are using it.
 
 ### Mark-up
 
