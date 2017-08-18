@@ -103,3 +103,7 @@ Flexible Embeds
 ===============
 
 Bullets comes with an `.embed` class. Add this to a `<div>` containing a video iframe or other object, and it will behave responsively. You may need to tweak to padding of `.embed` depending on aspect ratio.
+
+### Inputs
+
+Bullets comes with some basic input styling.
