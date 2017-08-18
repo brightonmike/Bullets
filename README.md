@@ -28,3 +28,11 @@ If you want to contribute - feel free. All pull requests considered. However, th
 
 - http://www.pharmatsea.co.uk/ (Bullets version 1)
 - http://formationfm.co.uk/
+
+Grid
+====
+
+The Bullets grid is flexbox based, with browser support extended through Gulp.
+
+  Columns
+  
