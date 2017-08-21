@@ -28,6 +28,7 @@ If you want to contribute - feel free. All pull requests considered. However, th
 
 - http://www.pharmatsea.co.uk/ (Bullets version 1)
 - http://formationfm.co.uk/
+- https://www.chevronsandeclairs.com/ Built by Ryan Gittings https://ryangittings.co.uk/freelance-web-designer-london
 
 Grid
 ====
