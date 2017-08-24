@@ -38,11 +38,11 @@ The Bullets grid is flexbox based, with browser support extended through Gulp. T
 
 ```
 <div class="row">
-  <div class="column column-m-12 column-t-6 columm-d-4">
+  <div class="column column-m-12 column-t-6 column-d-4">
   </div>
-  <div class="column column-m-12 column-t-6 columm-d-4">
+  <div class="column column-m-12 column-t-6 column-d-4">
   </div>
-  <div class="column column-m-12 column-t-6 columm-d-4">
+  <div class="column column-m-12 column-t-6 column-d-4">
   </div>  
 </div>
 ```
