@@ -24,6 +24,7 @@
     "babel-preset-stage-0": "^6.24.1",
     "browser-sync": "^2.18.12",
     "bullets-sass": "^6.0.0",
+    "bullets-js":"^1.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-babel": "^6.1.2",
