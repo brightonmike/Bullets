@@ -2,7 +2,6 @@
 var gulp  = require('gulp'),
     gutil = require('gulp-util'),
     sass = require('gulp-sass'),
-    //cssnano = require('gulp-cssnano'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
     jshint = require('gulp-jshint'),
@@ -13,7 +12,9 @@ var gulp  = require('gulp'),
     plumber = require('gulp-plumber'),
     bower = require('gulp-bower'),
     babel = require('gulp-babel'),
-    browserSync = require('browser-sync').create();
+    path = require('path'),
+    browserSync = require('browser-sync').create(),
+    webpack = require('webpack-stream');
 
 // Compile Sass, Autoprefix and minify
 gulp.task('styles', function() {
@@ -36,20 +37,9 @@ gulp.task('styles', function() {
 
 
 gulp.task('bullets-js', function() {
-  return gulp.src([
-    './assets/app/*.js',
-  ])
-	.pipe(babel({
-		presets: ['es2015'],
-	    compact: true
-	}))
-    .pipe(sourcemaps.init())
-    .pipe(concat('bullets.js'))
-    .pipe(gulp.dest('./assets/js'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('.')) // Creates sourcemap for minified JS
-    .pipe(gulp.dest('./assets/js'))
+return gulp.src(path.resolve(__dirname, './node_modules/BulletsJS/src/index.js'))
+  .pipe(webpack( require('./webpack.config.js') ))
+  .pipe(gulp.dest('assets/js/'));
 });
 
 
@@ -65,7 +55,7 @@ gulp.task('browsersync', function() {
 
     browserSync.init(files, {
 	    // Replace with URL of your local site
-	    proxy: "http://localhost/",
+	    proxy: "http://whitewater.dev/",
     });
 
     gulp.watch('./assets/scss/**/*.scss', ['styles']);
@@ -75,14 +65,11 @@ gulp.task('browsersync', function() {
 
 // Watch files for changes (without Browser-Sync)
 gulp.task('watch', function() {
-
   // Watch .scss files
   gulp.watch('./assets/scss/**/*.scss', ['styles']);
 
   // Watch bullets-js files
   gulp.watch('./assets/app/*.js', ['bullets-js']);
-
-
 });
 
 // Run styles and bullets-js
