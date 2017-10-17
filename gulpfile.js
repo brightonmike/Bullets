@@ -4,10 +4,6 @@ var gulp  = require('gulp'),
     sass = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     sourcemaps = require('gulp-sourcemaps'),
-    jshint = require('gulp-jshint'),
-    stylish = require('jshint-stylish'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     plumber = require('gulp-plumber'),
     bower = require('gulp-bower'),
@@ -37,7 +33,7 @@ gulp.task('styles', function() {
 
 
 gulp.task('bullets-js', function() {
-return gulp.src(path.resolve(__dirname, './node_modules/BulletsJS/src/index.js'))
+return gulp.src(path.resolve(__dirname, './node_modules/bullets-js/src/index.js'))
   .pipe(webpack( require('./webpack.config.js') ))
   .pipe(gulp.dest('assets/js/'));
 });
