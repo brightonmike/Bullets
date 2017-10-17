@@ -33,18 +33,20 @@ gulp.task('styles', function() {
 
 
 gulp.task('bullets-js', function() {
-return gulp.src(path.resolve(__dirname, './node_modules/bullets-js/src/index.js'))
+return gulp.src([
+    './node_modules/bullets-js/src/index.js',
+    './assets/js/scripts/*.js'
+    ])
   .pipe(webpack( require('./webpack.config.js') ))
   .pipe(gulp.dest('assets/js/'));
 });
-
 
 // Browser-Sync watch files and inject changes
 gulp.task('browsersync', function() {
     // Watch files
     var files = [
     	'./assets/css/*.css',
-    	'./assets/app/*.js',
+    	'./assets/js/scripts/*.js',
     	'**/*.php',
     	'assets/images/**/*.{png,jpg,gif,svg,webp}',
     ];
@@ -55,7 +57,7 @@ gulp.task('browsersync', function() {
     });
 
     gulp.watch('./assets/scss/**/*.scss', ['styles']);
-    gulp.watch('./assets/app/*.js', ['bullets-js']).on('change', browserSync.reload);
+    gulp.watch('./assets/js/scripts/*.js', ['bullets-js']).on('change', browserSync.reload);
 
 });
 
@@ -65,7 +67,7 @@ gulp.task('watch', function() {
   gulp.watch('./assets/scss/**/*.scss', ['styles']);
 
   // Watch bullets-js files
-  gulp.watch('./assets/app/*.js', ['bullets-js']);
+  gulp.watch('./assets/js/scripts/*.js', ['bullets-js']);
 });
 
 // Run styles and bullets-js
