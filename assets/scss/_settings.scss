@@ -1,11 +1,24 @@
 @import "../../node_modules/bullets-sass/scss/mixins";
 // Global
-$global-font-family:'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$global-font-size:16px;
-$global-line-height:1.2;
-$global-font-weight:300;
-$text-color:#222222;
-$global-width:1200px;
+$global-font-family:
+    // Safari for OS X and iOS (San Francisco)
+    -apple-system,
+    // Chrome >= 56 for OS X (San Francisco), Windows, Linux and Android
+    system-ui,
+    // Chrome < 56 for OS X (San Francisco)
+    BlinkMacSystemFont,
+    // Windows
+    "Segoe UI",
+    // Android
+    "Roboto",
+    // Basic web fallback
+    "Helvetica Neue", Arial, sans-serif !default;
+
+$global-font-size: 16px;
+$global-line-height: 1.15;
+$global-font-weight: 300;
+$text-color: #222222;
+$global-width: 1200px;
 
 $global-margin: 2rem;
 $global-padding: 2rem;
@@ -73,12 +86,14 @@ $h6-font-sizes: (
 );
 
 
-$header-font-family:'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
-$header-line-height:1.2;
-$header-bottom-margin:rem-calc(30);
+$header-font-family: $global-font-family;
+$header-line-height: 1.2;
+$header-bottom-margin: rem-calc(30);
 
-$paragraph-line-height:1.6;
-$paragraph-margin-bottom:1.2rem;
+$paragraph-line-height: 1.6;
+$paragraph-margin-bottom: 1.2rem;
+
+$hr-border: 1px solid $light-gray;
 
 $list-lineheight: $paragraph-line-height;
 $list-margin-bottom: $paragraph-margin-bottom;
@@ -98,10 +113,10 @@ $cite-pseudo-content: '\2014 \0020';
 $abbr-underline: 1px dotted $black;
 
 // inputs
-$input-height:60px;
-$input-border-color:$light-gray;
-$input-focus-color:$primary;
-$input-focus-border-color:$primary;
+$input-height: 60px;
+$input-border-color: $light-gray;
+$input-focus-color: $primary;
+$input-focus-border-color: $primary;
 
 // buttons
 $button-padding-topbottom: 14px;
@@ -136,15 +151,15 @@ $mobilebreak:rem-calc(320);
 
 // map the breakpoints
 $breakpoints: (
-	mobile-min: $mobilebreak,
-	phablet-min: $phabletbreak,
-	tablet-min: $tabletbreak,
-	laptop-min: $laptopbreak,
-	desktop-min: $desktopbreak,
-	mobile-max: $phabletbreak - 1,
-	phablet-max: $tabletbreak - 1,
-	tablet-max: $laptopbreak - 1,
-	laptop-max: $desktopbreak - 1,
+    mobile-min: $mobilebreak,
+    phablet-min: $phabletbreak,
+    tablet-min: $tabletbreak,
+    laptop-min: $laptopbreak,
+    desktop-min: $desktopbreak,
+    mobile-max: $phabletbreak - 1,
+    phablet-max: $tabletbreak - 1,
+    tablet-max: $laptopbreak - 1,
+    laptop-max: $desktopbreak - 1,
 );
 
 $grid-break-point-tablet:$tabletbreak;
