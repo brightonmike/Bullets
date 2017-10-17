@@ -2,6 +2,7 @@
 @import "../../node_modules/bullets-sass/scss/style";
 
 @include bullets-grid;
+@include bullets-align;
 @include bullets-type;
 @include bullets-table;
 @include bullets-links;
