@@ -7,7 +7,7 @@ module.exports = {
     },
     devtool: "sourcemap",
     externals: {
-        "jquery": "$"
+        "jquery": "jQuery"
     },       
     module: {
         loaders: [
