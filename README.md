@@ -67,17 +67,17 @@ Use the row modifier classes to change alignment.
 
 Horizontal:
 ```
-.row--justified
-.row--spaced
-.row--end
-.row--center
+.align--justified
+.align--spaced
+.align--end
+.align--center
 ```
 
 Vertical:
 ```
-.row--middle
-.row--bottom
-.row--top
+.align--middle
+.align--bottom
+.align--top
 ```
 ### CSS Grid
 
