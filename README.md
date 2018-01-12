@@ -16,8 +16,9 @@ If you find yourself removing 80% of what comes with a frame work - give Bullets
 - Bullets has a 12 column grid with column classes for mobile, tablet and desktop, with the breakpoints of these controllable seperate to your media queries (though using the mqs by default).
 
 ### Getting Started With Gulp
-- Run `npm update --save-dev` to update package.json dependencies to the latest and download the latest node modules.
+- Run `npm install` to install the dependancies
 - Run `gulp` to confirm everything is working
+- Run `gulp browsersync` to watch and compile, make sure you edit the browsersync proxy in gulpfile.js to match your sites local URL
 
 ### Contribute
 

@@ -1,0 +1,14 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "browsers": [
+          "last 4 versions",
+          "Explorer 10",
+          "last 4 Edge versions"
+        ]
+      },
+      "debug": true
+    }]
+  ]
+}
