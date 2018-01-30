@@ -1,37 +1,33 @@
 // Grab our gulp packages
-var gulp  = require('gulp'),
-    gutil = require('gulp-util'),
-    sass = require('gulp-sass'),
-    //cssnano = require('gulp-cssnano'),
-    autoprefixer = require('gulp-autoprefixer'),
-    sourcemaps = require('gulp-sourcemaps'),
-    jshint = require('gulp-jshint'),
-    stylish = require('jshint-stylish'),
-    uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
-    rename = require('gulp-rename'),
-    plumber = require('gulp-plumber'),
-    bower = require('gulp-bower'),
-    babel = require('gulp-babel'),
-    browserSync = require('browser-sync').create();
+const gulp  = require('gulp');
+
+// load all plugins in "devDependencies" into the variable $
+const $ = require("gulp-load-plugins")({
+    pattern: ["*"],
+    scope: ["devDependencies"]
+});
+
+// Simple error logger
+const onError = (err) => {
+    console.log(err);
+};
 
 // Compile Sass, Autoprefix and minify
 gulp.task('styles', function() {
     return gulp.src('./assets/scss/**/*.scss')
-        .pipe(plumber(function(error) {
-            gutil.log(gutil.colors.red(error.message));
-            this.emit('end');
-        }))
-        .pipe(sourcemaps.init()) // Start Sourcemaps
-        .pipe(sass({ outputStyle: 'compressed' }))
-        .pipe(autoprefixer({
+        .pipe($.plumber({errorHandler: onError}))
+        .pipe($.sourcemaps.init({loadMaps: true})) // Start Sourcemaps
+        .pipe($.sass({
+                outputStyle: 'compressed'
+            })
+            .on('error', $.sass.logError))
+        .pipe($.autoprefixer({
             browsers: ['last 5 versions'],
             cascade: false
         }))
         .pipe(gulp.dest('./assets/css/'))
-        .pipe(rename({suffix: '.min'}))
-        //.pipe(cssnano())  --- Don't really need a seperate module for this. You can minify the CSS with sass outputStyle
-        .pipe(sourcemaps.write('.')) // Creates sourcemaps for minified styles
+        .pipe($.rename({suffix: '.min'}))
+        .pipe($.sourcemaps.write('.')) // Creates sourcemaps for minified styles
         .pipe(gulp.dest('./assets/css/'))
 });
 
@@ -40,16 +36,16 @@ gulp.task('gunner-js', function() {
   return gulp.src([
 
   ])
-	.pipe(babel({
+	.pipe($.babel({
 		presets: ['es2015'],
 	    compact: true
 	}))
-    .pipe(sourcemaps.init())
-    .pipe(concat('gunner.js'))
+    .pipe($.sourcemaps.init())
+    .pipe($.concat('gunner.js'))
     .pipe(gulp.dest('./assets/js'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('.')) // Creates sourcemap for minified JS
+    .pipe($.rename({suffix: '.min'}))
+    .pipe($.uglify())
+    .pipe($.sourcemaps.write('.')) // Creates sourcemap for minified JS
     .pipe(gulp.dest('./assets/js'))
 });
 
